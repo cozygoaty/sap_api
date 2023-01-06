@@ -4,11 +4,14 @@ import sap
 
 app = Flask(__name__)
 
-@app.route('/sap/', methods=['GET'])
-def sap_page():
+
+@app.route('/random/name', methods=['GET'])
+def random_name_page():
     return sap.get_random_sap_team()
 
 
-@app.route('/sap/alliteration', methods=['GET'])
-def sap_alliteration_page():
+@app.route('/random/name/alliteration', methods=['GET'])
+def random_name_alliteration_page():
     return sap.get_random_sap_team_alliteration()
+
+
